@@ -342,6 +342,7 @@ This test allows the authors to compare if there is a significant difference in 
 **Insert the figure or table you described in Homework 2 here.**
 
 ![](images/Screen Shot 2026-05-26 at 9.24.10 PM.png)
+
 ### 4b. Visual clarity
 
 **How clearly does the table represent the data underlying tests? 2-4 sentences.**
