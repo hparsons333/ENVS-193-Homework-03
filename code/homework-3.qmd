@@ -100,6 +100,82 @@ temp_kelp_visual <-
 temp_kelp_visual
 ```
 
+### 1c. Check your assumptions and run your test
+
+#### Assumptions
+
+To run a Pearson's r, you want to ensure that there is a linear relationship between the two variables. From the scatter plot I created in part 1b, I can conclude that the relationship mostly appears to be linear.
+
+```{r}
+#| label: check-for-linear-relationship
+
+# displaying object from 1b
+temp_kelp_visual
+```
+
+I also want to make sure that the data is normally distributed. For this, I can create a QQ plot.
+
+```{r}
+# creating new object
+qqplot_temp <- 
+  # baselayer: ggplot
+  ggplot(
+    # df: kelp
+    data = kelp,
+    # variable: temp
+       aes(sample = temp_c)) +
+  # first layer: distribution of temp observations
+       stat_qq(distribution=qnorm) +
+  # second layer: expected distribution of temp
+stat_qq_line( col = "black")
+
+# displaying object
+qqplot_temp
+```
+
+```{r}
+# creating new object
+qqplot_kelp <- 
+  # first layer: ggplot
+  ggplot(
+    # df: kelp
+    data = kelp,
+         # variable: kelp_elong
+       aes(sample = kelp_elong)) +
+  # first layer: distribution of kelp elongation rate observations
+  stat_qq(distribution=qnorm) +
+  # second layer: expected distribution of kelp elongation rate
+  stat_qq_line( col = "black")
+
+# displaying object
+qqplot_kelp
+```
+
+It seems that the variables are mostly normally distributed.
+
+Additionally, the variables of kelp frond elongation rates and temperature need to be continuous, which they are since they are not integers, categorical, or ordinal data.
+
+Finally, the observations also need to be independent, which is true because the observations of kelp growth rates do not all come from the same individual.
+
+All of our assumptions have been checked so we can now run the Pearson's r.
+
+#### Pearson's r test
+
+```{r}
+#| label: pearsons-r
+
+#correlation test
+cor.test(
+  # df: kelp
+  # first variable: temp
+  kelp$temp_c, 
+  # df: kelp
+  # second variable: kelp elongation rates
+         kelp$kelp_elong,
+  # type of correlation test: Pearson's r
+         method = "pearson")
+```
+
 
 
 
