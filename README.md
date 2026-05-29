@@ -17,4 +17,4 @@ There are images `images` folder in which all uploaded images are stored.
 
 ## Rendered output
 
-The rendered .pdf for homework 03 and problems 1-4 is [here]
+The rendered .pdf for homework 03 and problems 1-4 is [here](https://github.com/hparsons333/ENVS-193-Homework-03/blob/main/code/homework-3.pdf)
