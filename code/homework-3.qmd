@@ -224,6 +224,87 @@ Both the Pearson's r and the Spearman's rho correlation tests would have led me 
 
 Additionally, the resulting r and rho was the same, -0.69, so both tests would lead for me to determine that there is a moderate negative correlation between temperature and kelp frond elongation rates. Both tests result in the same r and rho value because the variables they meet the assumptions of both the Pearson's r and the Spearman's rho.
 
+## Problem 2. Personal data
+
+### 2a. Updating visualizations
+
+#### Effect of outside engagements on job search
+
+```{r}
+#| label: visualizing-outside-eng
+
+# creating new object
+outside_eng_as_predictor <- 
+  # first layer: ggplot
+  ggplot(
+    # df: job_search
+    data = job_search,
+       mapping = aes(
+         # x-axis: outside engagements
+         # y-axis: time spent on job search
+         x = outside_eng,
+         y = job_search)) +
+  # first layer: points
+geom_point(color = "midnightblue") +
+  # changing the title and axes' titles
+  labs(title = "Effect of outside engagements on job search",
+       subtitle = "2026-05-27",
+       x = "Time spent on outside engagements (hour)",
+       y = "Time spent on Job Search (min)") +
+  # changing the theme
+  theme_bw() +
+  # getting rid of visual clutter
+  theme(panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank())
+
+# displaying the plot
+outside_eng_as_predictor
+```
+
+#### Effect of stress on outside engagements
+
+```{r}
+#| label: visualizing-stress
+
+# creating a new object
+stress_as_predictor <- ggplot(data = job_search,
+# x-axis: level of stress
+# y-axis: time spent on job search
+       mapping = aes(x = stress,
+                     y = job_search)) +
+  # first layer: points
+geom_jitter(color = "darkorchid",
+            height = 0,
+            width = 0.15) +
+  # changing title and axes' titles
+  labs(title = "Effect of stress on job search",
+       subtitle = "2026-05-27",
+       x = "Stress (Scale of 0-5)",
+       y = "Time spent on Job Search (min)") +
+  # changing the theme
+  theme_bw() +
+  # getting rid of visual clutter
+    theme(panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank())
+
+# displaying the plot
+stress_as_predictor
+```
+
+### 2b. Caption writing
+
+**Figure 1: Time spent on job search differs with varying time spent on outside engagements.** Small dark blue points represent an observation of recorded time spent on searching and applying for jobs in a single day. Points are distributed across x-axis, which represents the hours spent on outside engagements, including school (lectures) and work (shifts).
+
+**Figure 2: Time spent on job search differs with varying levels of stress.** Small purple points represent an observation of recorded time spent on searching and applying for jobs. Points are distributed across x-axis, which represents the the level of stress recorded on that day.
+
+*Note: I changed the stress column so that it would be categorical, with a value of 0 meaning I have no assignments or chores (with chores including necessary appointments, extracurricular, or meetings that are not work or school related).* - *0: No assignments or chores (chores including chores, necessary appointments/meetings, or extracurricular activities)*
+
+-   *1: One assignment or chore*
+-   *2: Two of either assignments or chores or a mix of both*
+-   *3: Three of either assignments or chores or a mix of both*
+-   *4: Midterm on that date*
+-   *5: Midterm plus one or more of an assignment or chore*
+
 
 
 
