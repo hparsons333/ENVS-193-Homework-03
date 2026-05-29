@@ -365,5 +365,3 @@ For my first recommendation, I would put the variables with significant differen
 For my second recommendation, I would take the average of the minimum/maximum daily temperatures, rather than the sum, to help viewers better understand the overall trend of temperatures in the restored vs. vernal pools with values that are familiar to them.
 
 For my third recommendation I would separate the one table into three tables for each section of variables (Water, Vegetation, and Soil). This way the authors could call attention to the variables within each section that have significant differences, instead of overwhelming the viewer with all the variables at once.
-
-
