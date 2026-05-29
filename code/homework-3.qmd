@@ -14,6 +14,8 @@ format: pdf
 #| label: reading-in-packages
 #| message: false
 #| warning: false
+
+# loading packages
 library(tidyverse)
 library(here)
 library(janitor)
