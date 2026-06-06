@@ -349,7 +349,7 @@ This test allows the authors to compare if there is a significant difference in 
 
 **Insert the figure or table you described in Homework 2 here.**
 
-![](images/Screen Shot 2026-05-26 at 9.24.10 PM-01.png)
+![](images/Screen%20Shot%202026-05-26%20at%209.24.10%20PM-01.png)
 
 ### 4b. Visual clarity
 
