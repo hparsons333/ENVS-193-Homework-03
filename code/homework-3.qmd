@@ -222,9 +222,11 @@ cor.test(
 
 ***In your description, be specific about the tests, their components, and their relation to the variables.***
 
-Both the Pearson's r and the Spearman's rho correlation tests would have led me to reject the null hypothesis that there is no correlation between temperature and kelp frond elongation rates, because they both had a significant p-value that was less than the significance level of $\alpha$ = 0.05.
+To analyze the strength of the relationship between temperature and giant kelp frond elongation rate, I used both a Pearson's r correlation test and a Spearman's $\rho$ correlation test.
 
-Additionally, the resulting r and rho was the same, -0.69, so both tests would lead for me to determine that there is a moderate negative correlation between temperature and kelp frond elongation rates. Both tests result in the same r and rho value because the variables they meet the assumptions of both the Pearson's r and the Spearman's rho.
+The results of both the Pearson's correlation coefficient test and the Spearman's rank correlation coefficient test would have led me to reject the null hypothesis that there is no correlation between kelp frond elongation rates and temperature, and alternatively determine that there is a moderate negative correlation between the two variables ((Pearson's r = -0.69, t(30) = -5.2, p \< 0.001, $\alpha$ = 0.05; Spearman's $\rho$ = -0.69, S = 9216, p \< 0.001, $\alpha$ = 0.05).
+
+Both tests result in the same value for the correlation coefficient because both of the variables being tested meet the assumptions of the Pearson's r and the Spearman's $\rho$.
 
 ## Problem 2. Personal data
 
